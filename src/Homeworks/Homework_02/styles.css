@@ -1,0 +1,21 @@
+.homework {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: normal ;
+  justify-content: flex-start;
+  background-color: rgb(224, 224, 65);
+  
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}

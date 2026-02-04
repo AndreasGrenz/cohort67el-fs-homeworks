@@ -1,6 +1,20 @@
-
+import Card from "../../components/Card/Card";
+import "./styles.css";
 
 function Homework_02() {
-  return <div>Homework 02</div>;
+  return (
+    <div className="homework">
+
+      <h1>Homework 02</h1>
+
+      <div className="cards">
+        <Card/>
+        <Card/>
+        <Card/>
+      </div>
+
+    </div>
+  );
 }
+
 export default Homework_02;

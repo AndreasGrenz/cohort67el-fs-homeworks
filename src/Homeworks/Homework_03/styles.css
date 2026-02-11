@@ -1,6 +1,7 @@
-.homework_03 {
-  min-height: 100vh;
+.homework_03_wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex: 1;
+  background-color: rgb(23, 23, 76);
 }

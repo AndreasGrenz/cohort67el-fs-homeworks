@@ -1,9 +1,10 @@
 import Feedback from "../../components/Feedback/Feedback";
+
 import "./styles.css";
 
 function Homework_04() {
   return (
-    <div className="homework_wrapper">
+    <div className="homework_04_wrapper">
       <Feedback />
     </div>
   );

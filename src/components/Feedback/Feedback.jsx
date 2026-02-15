@@ -1,46 +1,59 @@
 import { useState } from "react";
+
 import Button from "../Button/Button";
+
 import "./styles.css";
 
 function Feedback() {
-  const [likes, setLikes] = useState(0);
-  const [dislikes, setDislikes] = useState(0);
+  const [like, setLike] = useState(0); // Если мы ничего не передаем в качестве аргумента функции useState(), то 1 элемент массива, который эта функция возвращает === undefined
+  const [dislike, setDislike] = useState(0);
 
   const onLike = () => {
-    setLikes((prevValue) => {
+    // setLike((prevValue) => {
+    //   return like + 1;
+    // });
+    //  setLike((prevValue) => {
+    //   return like + 1;
+    // });
+    //  setLike((prevValue) => {
+    //   return like + 1;
+    // });
+
+        setLike((prevValue) => {
+      return prevValue + 1;
+    });
+     setLike((prevValue) => {
+      return prevValue + 1;
+    });
+     setLike((prevValue) => {
       return prevValue + 1;
     });
   };
+
+  console.log("Component Feedback rendering!!!");
 
   const onDislike = () => {
-    setDislikes((prevValue) => {
-      return prevValue + 1;
-    });
+    setDislike((prevValue) => prevValue + 1);
   };
 
-  const onReset = () => {
-    setLikes((prevValue) => {
-      return 0;
-    });
-
-    setDislikes((prevValue) => {
-      return 0;
-    });
+  const resetResults = () => {
+    setLike(0);
+    setDislike(0);
   };
 
   return (
-    <div className="feedback_wrapper">
-      <div className="feedback_row">
-        <Button name="Like" onClick={onLike} />
-        <span className="value">{likes}</span>
+    <div className="feedback-wrapper">
+      <div className="feedback-control">
+        <div className="buttonwithcount-container">
+          <Button name="Like" onClick={onLike} />
+          <p className="count">{like}</p>
+        </div>
+        <div className="buttonwithcount-container">
+          <Button name="Dislike" onClick={onDislike} />
+          <p className="count">{dislike}</p>
+        </div>
       </div>
-
-      <div className="feedback_row">
-        <Button name="Dislike" onClick={onDislike} />
-        <span className="value">{dislikes}</span>
-      </div>
-
-      <Button name="Reset Results" onClick={onReset} />
+      <Button name="Reset Results" onClick={resetResults} />
     </div>
   );
 }

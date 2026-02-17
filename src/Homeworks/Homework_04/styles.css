@@ -1,5 +1,11 @@
-.homework_wrapper {
+.homework_04_wrapper {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  flex: 1;
+}
+
+.button-control {
+  width: 300px;
 }
